@@ -8,6 +8,10 @@
 char doc[MAX_LINES][MAX_LENGTH];
 int line_count = 0;
 
+void greet(const char *name) {
+    printf("Hello, %s! Welcome to your GitHub portfolio.\n", name);
+}
+
 void display_document() {
     printf("\n--- DOCUMENT CONTENT ---\n");
     if (line_count == 0) {
@@ -77,6 +81,8 @@ void show_stats() {
 int main() {
     int choice, line_num;
     char buffer[MAX_LENGTH];
+
+    greet("Ada");
 
     while (1) {
         printf("=== LINE EDITOR MENU ===\n");
